@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sidepadding">16dp</dimen>
+    <dimen name="toppadding">8dp</dimen>
+</resources>

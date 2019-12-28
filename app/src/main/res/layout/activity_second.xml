@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+    android:background="#bbc2c2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout2"
+        android:padding="8dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/passcodeName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:errorEnabled ="true"
+            android:background="@drawable/shape1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="NAME"
+                android:id="@+id/passcodeName1"
+                android:autofillHints="false"
+                android:textSize="25sp"
+                android:inputType ="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/shape1"
+            android:spinnerMode="dialog"
+            android:prompt="@layout/support_simple_spinner_dropdown_item"
+            android:id="@+id/passcodeType"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passcodeName"
+            />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/passcodeType"
+        android:layout_marginTop="16dp"
+        android:id="@+id/linearlayoutDialog"
+        android:background="@drawable/shape1"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VALID BETWEEN"
+            android:textSize="20sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="START TIME"
+                android:layout_marginTop="16dp"
+                android:textSize="15sp"
+                android:id="@+id/startTimer1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="END TIME"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="16dp"
+                android:textSize="15sp"
+                android:id="@+id/startTimer3"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09:30"
+                android:layout_marginTop="0dp"
+                android:textSize="25sp"
+                android:id="@+id/startTimer2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11:00"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="0dp"
+                android:textSize="25sp"
+                android:id="@+id/startTimer4"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VALID ON"
+            android:layout_marginTop="8dp"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EVERYDAY"
+            android:layout_marginTop="8dp"
+            android:textAllCaps="true"
+            android:id="@+id/everyday"/>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="wrap_content"
+            android:padding="2dp"
+            android:layout_height="wrap_content"
+            app:singleLine="true"
+            app:singleSelection="false"
+            android:layout_marginBottom="16dp"
+            android:id="@+id/chipGroup"
+            style="@style/Widget.MaterialComponents.Chip.Entry">
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUN"
+                android:checkable="true"
+                app:rippleColor="@color/colorAccent"
+                android:id="@+id/sun"/>
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MON"
+                android:id="@+id/mon"
+                android:checkable="true"
+                app:rippleColor="@color/colorAccent"/>
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TUE"
+                android:id="@+id/tue"
+                android:checkable="true"
+                app:rippleColor="@color/colorAccent"/>
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rippleColor="@color/colorAccent"
+                android:checkable="true"
+                android:text="WED"
+                android:id="@+id/wed"/>
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="THU"
+                android:id="@+id/thu"
+                android:checkable="true"
+                app:rippleColor="@color/colorAccent"/>
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rippleColor="@color/colorAccent"
+                android:text="FRI"
+                android:id="@+id/fri"
+                android:checkable="true"/>
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SAT"
+                android:id="@+id/sat"
+                android:checkable="true"
+                app:rippleColor="@color/colorAccent"/>
+
+        </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/passcodeCode"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearlayoutDialog"
+            app:errorEnabled ="true"
+            app:passwordToggleEnabled="true"
+            android:background="@drawable/shape1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="PASSCODE"
+                android:id="@+id/passcodeCode1"
+                android:textSize="25sp"
+                android:inputType ="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/passcodeCodeReEnter"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passcodeCode"
+            app:errorEnabled ="true"
+            app:passwordToggleEnabled="true"
+            android:background="@drawable/shape1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="RE-ENTER PASSCODE"
+                android:id="@+id/passcodeCodeReEnter1"
+                android:textSize="25sp"
+                android:inputType ="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="SAVE"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passcodeCodeReEnter"
+            android:background="@drawable/shape"
+            android:textColor="#ff9800"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
